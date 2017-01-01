@@ -32,7 +32,7 @@ namespace Qisda.Service
                 HomeLineH data = new HomeLineH();
                 if (!realtime)
                 {
-                    var hline = dbContext.HomeLineHs.Where(h => h.LineType == id).FirstOrDefault();
+                    var hline = dbContext.HomeLineHs.Where(h => h.LineType == id).LastOrDefault();
                     data = hline;
                     data.Assistant = hline.Assistant;
                     data.Technician = hline.Technician;
